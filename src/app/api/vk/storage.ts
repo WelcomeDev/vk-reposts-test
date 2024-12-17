@@ -5,7 +5,7 @@ export async function getDb() {
     try {
         const content = await fs.readFile(path.resolve('./data/messages.json'), 'utf8');
         return JSON.parse(content);
-    } catch (err) {
+    } catch (_err) {
         return [];
     }
 }
